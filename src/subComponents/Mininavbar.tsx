@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence, scale, color } from "framer-motion";
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const variants = {
   collapsed: { height: 0, opacity: 0, transition: { duration: 0.25 } },

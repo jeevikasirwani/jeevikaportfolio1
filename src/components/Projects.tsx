@@ -16,18 +16,18 @@ function Projects() {
       }
     }
   }
-  const letterVariants = {
-  hidden: { rotateX: 0, opacity: 0 },
-  visible: (i:string) => ({
-    rotateX: 360,
-    opacity: 1,
-    transition: {
-      delay: i * 0.1, // Each letter delayed by index * 0.1s
-      duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1]
-    }
-  })
-}
+//   const letterVariants = {
+//   hidden: { rotateX: 0, opacity: 0 },
+//   visible: (i:string) => ({
+//     rotateX: 360,
+//     opacity: 1,
+//     transition: {
+//       delay: i * 0.1, // Each letter delayed by index * 0.1s
+//       duration: 0.6,
+//       ease: [0.25, 0.1, 0.25, 1]
+//     }
+//   })
+// }
 
   // Animation variants for each card
   const cardVariants = {

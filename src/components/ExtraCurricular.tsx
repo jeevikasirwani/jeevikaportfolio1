@@ -36,18 +36,18 @@ function ExtraCurricular() {
   }
 
   // Letter animation variants for title
-  const letterVariants = {
-    hidden: { rotateY: 0, opacity: 0 },
-    visible: (i: number) => ({
-      rotateY: 360,
-      opacity: 1,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1]
-      }
-    })
-  }
+  // const letterVariants = {
+  //   hidden: { rotateY: 0, opacity: 0 },
+  //   visible: (i: number) => ({
+  //     rotateY: 360,
+  //     opacity: 1,
+  //     transition: {
+  //       delay: i * 0.1,
+  //       duration: 0.6,
+  //       ease: [0.25, 0.1, 0.25, 1]
+  //     }
+  //   })
+  // }
 
   return (
     <div className="border-b border-dashed border-gray-700 p-6 max-w-full mx-auto">
@@ -88,7 +88,7 @@ function ExtraCurricular() {
               timeline={activity.timeline}
               location={activity.location}
               eventname={activity.eventname}
-              image={activity.image}
+              
             />
           </motion.div>
         ))}
