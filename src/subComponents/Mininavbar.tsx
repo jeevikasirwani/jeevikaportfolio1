@@ -5,8 +5,11 @@ const variants = {
   collapsed: { height: 0, opacity: 0, transition: { duration: 0.25 } },
   expanded: { height: "auto", opacity: 1, transition: { duration: 0.25 } },
 };
+type MiniNavbarProps = {
+  isOpen: boolean;
+};
 
-export default function MiniNavbar({ isOpen }) {
+export default function MiniNavbar({ isOpen }:MiniNavbarProps) {
   return (
     <AnimatePresence>
       {(isOpen || window.innerWidth >= 640) && (

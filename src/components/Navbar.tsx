@@ -36,7 +36,7 @@ const Navbar = () => {
         </motion.h1>
 
         <div>
-          <Mininavbar/>
+          <Mininavbar isOpen={true} />
         </div>
         <div className="flex items-center gap-3 sm:gap-4">
           <motion.a
