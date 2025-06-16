@@ -45,7 +45,7 @@ function Card({
             <motion.a
             whileHover={{scale:1.2}} 
               href={liveLink} 
-              className="text-violet-500 hover:underline"
+              className="text-violet-400 hover:underline"
               target="_blank"
             //   rel="noopener noreferrer"
             >
@@ -54,7 +54,7 @@ function Card({
             <motion.a 
             whileHover={{scale:1.2}} 
               href={gitHubLink} 
-              className="text-violet-500 hover:underline"
+              className="text-violet-400 hover:underline"
               target="_blank"
             //   rel="noopener noreferrer"
             >

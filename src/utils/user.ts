@@ -45,7 +45,7 @@ interface Extracurricular {
     timeline: string;
     location: string;
     eventname: string;
-    image: string;
+    
 }
 
 export interface UserData {
@@ -156,7 +156,7 @@ const user: UserData = {
             timeline: "Jul 2022 - Jul 2023",
             location: "Pune, India",
             eventname: "GDSC-PCCOER",
-            image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+            
         },
         {
             title: "Member",
@@ -164,7 +164,7 @@ const user: UserData = {
             timeline: "Jul 2022 - Jul 2023",
             location: "Pune, India",
             eventname: "Computer Cosmos Consortium (CCube)",
-            image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+            
         },
         {
             title: "Crowd Management Volunteer",
@@ -172,7 +172,7 @@ const user: UserData = {
             timeline: "March 2023 - April 2023",
             location: "Pune, India",
             eventname: "GDG PUNE AND WOMEN TECHMAKERS EVENT",
-            image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+            
         },
     ],
     education: [

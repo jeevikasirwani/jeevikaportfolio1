@@ -15,7 +15,7 @@ export default function MiniNavbar({ isOpen }) {
           animate="expanded"
           exit="collapsed"
           variants={variants}
-          className="overflow-hidden border rounded-3xl w-full p-6
+          className="font-mono overflow-hidden border rounded-3xl w-full p-6
                      
                      hidden sm:block border-dashed border-gray-700"
         >

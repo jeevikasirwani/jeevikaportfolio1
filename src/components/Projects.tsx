@@ -48,7 +48,7 @@ function Projects() {
   }
 
   return (
-    <div className="p-6 border-b border-dashed border-gray-700">
+    <div className="font-mono p-6 border-b border-dashed border-gray-700">
       <motion.h1 
     //   variants={letterVariants}
         className="text-3xl font-bold mb-8 text-start"

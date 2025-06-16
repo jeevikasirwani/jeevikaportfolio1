@@ -30,26 +30,26 @@ const Typewriter = memo(TypewriterComponent);
 export default memo(function About() {
 const intro = `
 <p class="mb-3">
-  I’m a <span class="text-violet-500 font-semibold">fullstack engineer</span> who designs. 🎨
-  <p class="mb-3">I build <span class="text-violet-500 font-semibold">interfaces</span> that feel as
-  good as they function, obsessing over the <span class="text-violet-500 font-semibold">details</span> most users won't
+  I’m a <span class="text-violet-400 font-semibold">fullstack engineer</span> who designs. 🎨
+  <p class="mb-3">I build <span class="text-violet-400 font-semibold">interfaces</span> that feel as
+  good as they function, obsessing over the <span class="text-violet-400 font-semibold">details</span> most users won't
   notice – but would miss if they were gone. 🔍✨</p>
 </p>
 
 <h3 class="mb-3">
-  My code is <span class="text-violet-500 font-semibold">purposeful</span>: sometimes
+  My code is <span class="text-violet-400 font-semibold">purposeful</span>: sometimes
   minimalist, sometimes over-engineered (like this site!), but always intentional. ⚡
 </h3>
 
 <p class="mb-3">
-  I believe in <span class="text-violet-500 font-semibold">progress over perfection</span> 🚀 and
+  I believe in <span class="text-violet-400 font-semibold">progress over perfection</span> 🚀 and
   that the best solutions emerge at the intersection of
-  <span class="text-violet-500 font-semibold">design thinking</span> and
-  <span class="text-violet-500 font-semibold">technical rigor</span>. 🧠💻
+  <span class="text-violet-400 font-semibold">design thinking</span> and
+  <span class="text-violet-400 font-semibold">technical rigor</span>. 🧠💻
   <p class="mb-3">By day, I ship production code. By night, I'm tinkering with: 
-  <span class="text-violet-500 font-semibold">UI/UX experiments</span> (animations, 
-  <span class="text-violet-500 font-semibold">micro-interactions</span>), 
-  tools that spark joy (<span class="text-violet-500 font-semibold">custom hooks</span>, 
+  <span class="text-violet-400 font-semibold">UI/UX experiments</span> (animations, 
+  <span class="text-violet-400 font-semibold">micro-interactions</span>), 
+  tools that spark joy (<span class="text-violet-400 font-semibold">custom hooks</span>, 
   design systems), bending frameworks to do weird, wonderful things. 🛠️🎭</p> 
   <p>Let's make something that matters!</p>
 </p>

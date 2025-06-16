@@ -57,9 +57,9 @@ const Navbar = () => {
             whileHover={{ scale: 1 }}
             whileTap={{ scale: 0.9 }}
             href={linkedin}
-            className="p-1 hover:border-3 hover:rounded-xl hover:border-purple-300  rounded-md transition-colors duration-200"
+            className="p-1 hover:border-3 hover:rounded-xl hover:border-violet-400  rounded-md transition-colors duration-200"
             target="_blank"
-            rel="noopener noreferrer"
+            // rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
           >
             <LinkedInIcon />

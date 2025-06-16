@@ -13,7 +13,7 @@ function Experience() {
             
             {/* Mobile: Timeline on left with content below */}
             <div className="flex sm:flex-col items-center sm:items-center mr-4 sm:mr-8 mb-4 sm:mb-0">
-              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-violet-500 rounded-full border-2 border-gray-600"></div>
+              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-violet-400 rounded-full border-2 border-gray-600"></div>
               
               {userData.experience[index + 1] && (
                 <div className="hidden sm:block w-0.5 h-32 sm:h-48 bg-white mt-2"></div>
