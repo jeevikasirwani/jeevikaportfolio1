@@ -12,7 +12,8 @@ interface Project {
     link: string;
     technologies: string[];
     github: string;
-    live: string;
+    
+    date:string;
 }
 
 interface About {
@@ -96,34 +97,56 @@ const user: UserData = {
         {
             title: "Readme Blog App",
             description: "A blog application deployed on Cloudflare Workers featuring clean UI and smooth text editing experience. Enhanced with Framer Motion animations for polished user experience.",
-            link: "",
+            
             technologies: ["React", "Hono", "TypeScript", "Prisma", "PostgreSQL"],
-            github: "https://github.com/jeevikasirwani",
-            live: "",
+            github: "https://github.com/jeevikasirwani/readme",
+            link: "https://readme100xdevs-7of2q0v5a-jeevikasirwanis-projects.vercel.app/signup",
+            date:"2025"
         },
         {
             title: "MERN Chat Application",
             description: "Real-time chat application utilizing the MERN stack, providing users with seamless and interactive communication platform with live messaging capabilities.",
             link: "",
             technologies: ["MongoDB", "Express.js", "React", "Node.js"],
-            github: "https://github.com/jeevikasirwani",
-            live: "",
+            github: "https://github.com/jeevikasirwani/mernapp",
+            
+            date:"2024"
         },
         {
             title: "Website AI Builder",
             description: "Simple website builder that lets you create professional sites fast. Uses AI (Cohere) to help write content, with React and Tailwind ensuring sleek design.",
-            link: "",
+            link: "https://github.com/jeevikasirwani/bolt",
             technologies: ["React", "Tailwind CSS", "Cohere AI"],
-            github: "https://github.com/jeevikasirwani",
-            live: "",
+            github: "https://github.com/jeevikasirwani/bolt",
+            
+            date:"2025"
         },
         {
             title: "Object Detection Web App",
             description: "Object detection application for visually impaired users using YOLOV8. Includes functionality to detect objects and provide voice feedback for accessibility.",
-            link: "",
+            link: "https://github.com/jeevikasirwani",
             technologies: ["React", "TypeScript", "YOLOV8", "ONNX Runtime", "TTS"],
             github: "https://github.com/jeevikasirwani",
-            live: "",
+            
+            date:"2024"
+        },
+        {
+            title: "Portfolio Website",
+            description: "Portfolio Website.",
+            link: "",
+            technologies: ["React", "TypeScript", "Framer", "Tailwind", "Nextjs"],
+            github: "https://github.com/jeevikasirwani/jeevikaportfolio1",
+            
+            date:"2025"
+        },
+        {
+            title: "LinkedIn Clone",
+            description: "Object detection application for visually impaired users using YOLOV8. Includes functionality to detect objects and provide voice feedback for accessibility.",
+           
+            technologies: ["React", "TypeScript", "Redux"],
+            github: "https://github.com/jeevikasirwani/linkedin-clone",
+            link: "https://linkedin-clone-86f74.web.app/",
+            date:"2024"
         },
     ],
     extracurricular: [

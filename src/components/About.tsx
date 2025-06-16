@@ -58,7 +58,7 @@ const intro = `
 
 // Note: Replace "yourusername" with your actual GitHub username
   return (
-    <div className={`p-10 ${ibmPlexMono.className} text-gray-500 border-b border-dashed border-gray-700`}>
+    <div className={`p-10 ${ibmPlexMono.className} text-white border-b border-dashed border-gray-700`}>
       <motion.div
         animate={{
           y: [0, -10, 0],
