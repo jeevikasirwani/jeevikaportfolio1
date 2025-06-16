@@ -6,34 +6,23 @@ import ExtracurricularCard from '@/subComponents/ExtracurricularCard';
 
 function ExtraCurricular() {
   // Animation variants for the container
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.6,
-        staggerChildren: 0.3
-      }
-    }
-  }
-
-  // Animation variants for alternating cards
   const cardVariants = {
-    hidden: (index: number) => ({
-      x: index % 2 === 0 ? -120 : 80, 
-      opacity: 0,
-      scale: 0.9
-    }),
-    visible: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1]
-      }
+  hidden: (index: number) => ({
+    x: index % 2 === 0 ? -120 : 80,
+    opacity: 0,
+    scale: 0.9
+  }),
+  visible: () => ({
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number]
     }
-  }
+  })
+}
+
 
   // Letter animation variants for title
   // const letterVariants = {
