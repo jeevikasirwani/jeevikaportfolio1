@@ -6,7 +6,7 @@ import ExtracurricularCard from '@/subComponents/ExtracurricularCard';
 
 function ExtraCurricular() {
   // Animation variants for the container
-  const cardVariants = {
+  const containerVariants = {
   hidden: (index: number) => ({
     x: index % 2 === 0 ? -120 : 80,
     opacity: 0,
