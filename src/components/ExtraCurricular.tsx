@@ -63,7 +63,7 @@ function ExtraCurricular() {
         {user.extracurricular.map((activity, index) => (
           <motion.div
             key={index}
-            variants={cardVariants}
+            variants={containerVariants}
             custom={index}
             whileHover={{ 
               scale: 1.02,
