@@ -9,7 +9,11 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
   display: "swap",
 });
-function TypewriterComponent({ text, speed = 50 }) {
+type TypewriterProps = {
+  text: string;
+  speed?: number;
+};
+function TypewriterComponent({ text, speed = 50 }:TypewriterProps) {
   const [display, setDisplay] = useState("");
   const [cursor, setCursor] = useState(0);
 
