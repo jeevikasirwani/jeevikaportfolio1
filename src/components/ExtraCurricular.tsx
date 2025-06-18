@@ -8,7 +8,7 @@ function ExtraCurricular() {
   // Animation variants for the container
   const containerVariants = {
   hidden: (index: number) => ({
-    x: index % 2 === 0 ? -120 : 80,
+    x: index % 2 === 0 ? -80 : 80,
     opacity: 0,
     scale: 0.9
   }),

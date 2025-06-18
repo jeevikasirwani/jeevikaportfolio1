@@ -5,7 +5,7 @@ function Education() {
 
  return (
     <div className="font-mono p-4 sm:p-6 md:p-8 font-mono min-h-1.5 border-b border-dashed border-gray-700">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-gray-300 tracking-wider">EXPERIENCE</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-gray-300 tracking-wider">EDUCATION</h1>
       
       <div className="relative">
         {userData.education.map((edu, index) => (
