@@ -94,6 +94,26 @@ const user: UserData = {
         },
     ],
     projects: [
+            
+        {
+            title: "Data Alchemist",
+            description:"The Data Alchemist is an AI-powered Next.js web application that transforms chaotic spreadsheet data into organized, validated, and rule-based resource allocation configurations.",
+            
+            technologies: ["typescript", "nextjs", "sentence-embeddings", "huggingface", "sentence-transformers"],
+            github: "https://github.com/jeevikasirwani/data-Alchemist",
+            link: "https://data-9wd09iuw9-jeevikasirwanis-projects.vercel.app/",
+            date:"2025"
+        },
+        
+        {
+            title: "Payvia",
+            description:"PayVia is a modern digital wallet application built with Next.js and Prisma, enabling secure money storage, peer-to-peer transfers, and transaction management. Features a monorepo architecture with separate user and merchant interfaces, NextAuth authentication, and a responsive UI for seamless financial transactions.",
+            
+            technologies: ["react", "typescript", "nextjs","prisma" ,"framer-motion" ,"zustand" ,"nextauth" ,"turborepo"],
+            github: "https://github.com/jeevikasirwani/Payvia",
+            link: "https://payvia-q7s81fays-jeevikasirwanis-projects.vercel.app/home",
+            date:"2025"
+        },
         {
             title: "Readme Blog App",
             description: "A blog application deployed on Cloudflare Workers featuring clean UI and smooth text editing experience. Enhanced with Framer Motion animations for polished user experience.",
