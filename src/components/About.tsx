@@ -1,7 +1,12 @@
 "use client";
-import React, { useState, useEffect,memo } from "react";
+import React, { useState, useEffect, memo, useRef } from "react";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { RoughNotation } from "react-rough-notation";
 import { IBM_Plex_Mono } from "next/font/google";
+
+
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -9,69 +14,169 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
   display: "swap",
 });
-type TypewriterProps = {
-  text: string;
-  speed?: number;
-};
-function TypewriterComponent({ text, speed = 50 }:TypewriterProps) {
-  const [display, setDisplay] = useState("");
-  const [cursor, setCursor] = useState(0);
+
+gsap.registerPlugin(SplitText);
+
+
+export default function About() {
+  const textRef = useRef<HTMLDivElement>(null);
+  const [showAnnotations, setShowAnnotations] = useState(false);
 
   useEffect(() => {
-    if (cursor < text.length) {
-      const id = setTimeout(() => {
-        setDisplay((prev) => prev + text[cursor]);
-        setCursor((prev) => prev + 1);
-      }, speed);
-      return () => clearTimeout(id);
+    
+
+    if (textRef.current) {
+      const paragraphs = textRef.current.querySelectorAll('p');
+      
+      paragraphs.forEach((p, index) => {
+        const split = new SplitText(p, { type: "words" });
+        
+        gsap.fromTo(split.words, {
+          opacity: 0,
+          
+        }, {
+          opacity: 1, 
+          duration: 0.8,
+          stagger: 0.05,
+          delay: 2 + (index * 0.3),
+          ease: "sine.out"
+        });
+      });
     }
-  }, [cursor, text, speed]);
 
-  return <div dangerouslySetInnerHTML={{ __html: display }} />;
-}
-const Typewriter = memo(TypewriterComponent);
+    setTimeout(() => setShowAnnotations(true), 4000);
+  }, []);
 
-export default memo(function About() {
-const intro = `
-<p class="mb-3">
-  I’m a <span class="text-violet-400 font-semibold">fullstack engineer</span> who designs. 🎨
-  <p class="mb-3">I build <span class="text-violet-400 font-semibold">interfaces</span> that feel as
-  good as they function, obsessing over the <span class="text-violet-400 font-semibold">details</span> most users won't
-  notice – but would miss if they were gone. 🔍✨</p>
-</p>
-
-<h3 class="mb-3">
-  My code is <span class="text-violet-400 font-semibold">purposeful</span>: sometimes
-  minimalist, sometimes over-engineered (like this site!), but always intentional. ⚡
-</h3>
-
-<p class="mb-3">
-  I believe in <span class="text-violet-400 font-semibold">progress over perfection</span> 🚀 and
-  that the best solutions emerge at the intersection of
-  <span class="text-violet-400 font-semibold">design thinking</span> and
-  <span class="text-violet-400 font-semibold">technical rigor</span>. 🧠💻
-  <p class="mb-3">By day, I ship production code. By night, I'm tinkering with: 
-  <span class="text-violet-400 font-semibold">UI/UX experiments</span> (animations, 
-  <span class="text-violet-400 font-semibold">micro-interactions</span>), 
-  tools that spark joy (<span class="text-violet-400 font-semibold">custom hooks</span>, 
-  design systems), bending frameworks to do weird, wonderful things. 🛠️🎭</p> 
-  <p>Let's make something that matters!</p>
-</p>
-
-`;
-
-// Note: Replace "yourusername" with your actual GitHub username
   return (
     <div className={`p-10 ${ibmPlexMono.className} text-white border-b border-dashed border-gray-700`}>
-      <motion.div
-        animate={{
-          y: [0, -10, 0],
-          transition: { repeat: Infinity, duration: 3.5 },
-        }}
-      >
-        <Typewriter text={intro} speed={10} />
-      </motion.div>
+     
+      <div ref={textRef} className="space-y-6 text-lg leading-relaxed">
+        <p>
+          I'm a{" "}
+          <RoughNotation 
+            type="underline" 
+            color="#8b5cf6" 
+            show={showAnnotations}
+            animationDelay={500}
+          >
+            fullstack engineer
+          </RoughNotation>{" "}
+          who designs. 🎨
+        </p>
+
+        <p>
+          I build{" "}
+          <RoughNotation 
+            type="underline" 
+            color="#06b6d4" 
+            show={showAnnotations}
+            animationDelay={1000}
+          >
+            interfaces
+          </RoughNotation>{" "}
+          that feel as good as they function, obsessing over the{" "}
+          <RoughNotation 
+            type="circle" 
+            color="#10b981" 
+            show={showAnnotations}
+            animationDelay={1500}
+            strokeWidth={3}
+            padding={10}
+          >
+            details
+          </RoughNotation>{" "}
+          most users won't notice – but would miss if they were gone. 🔍✨
+        </p>
+
+        <p>
+          My code is{" "}
+          <RoughNotation 
+            type="box" 
+            color="#f59e0b" 
+            show={showAnnotations}
+            animationDelay={2000}
+          >
+            purposeful
+          </RoughNotation>
+          : sometimes minimalist, sometimes over-engineered (like this site!), 
+          but always intentional. ⚡
+        </p>
+
+        <p>
+          I believe in{" "}
+          <RoughNotation 
+            type="bracket" 
+            color="#ef4444" 
+            show={showAnnotations}
+            animationDelay={2500}
+            brackets={["left", "right"]}
+          >
+            progress over perfection
+          </RoughNotation>{" "}
+          🚀 and that the best solutions emerge at the intersection of{" "}
+                     <RoughNotation 
+             type="underline" 
+             color="#8b5cf6" 
+             show={showAnnotations}
+             animationDelay={3000}
+           >
+             design thinking
+           </RoughNotation>{" "}
+          and{" "}
+          
+            technical rigor
+          
+          . 🧠💻
+        </p>
+
+        <p>
+          By day, I ship production code. By night, I'm tinkering with:{" "}
+          <RoughNotation 
+            type="strike-through" 
+            color="#f59e0b" 
+            show={showAnnotations}
+            animationDelay={3500}
+          >
+            boring stuff
+          </RoughNotation>{" "}
+          <RoughNotation 
+            type="underline" 
+            color="#10b981" 
+            show={showAnnotations}
+            animationDelay={3700}
+          >
+            UI/UX experiments
+          </RoughNotation>{" "}
+          (animations,{" "}
+          <RoughNotation 
+            type="underline" 
+            color="#8b5cf6" 
+            show={showAnnotations}
+            animationDelay={4000}
+          >
+            micro-interactions
+          </RoughNotation>
+          ), tools that spark joy! 🛠️🎭
+        </p>
+
+        <motion.p 
+          className="text-2xl font-bold text-center mt-8"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 5, type: "spring", stiffness: 500, damping: 25 }}
+        >
+          <RoughNotation 
+            type="underline" 
+            color="#8b5cf6" 
+            show={showAnnotations}
+            animationDelay={5000}
+            strokeWidth={4}
+            padding={15}
+          >
+            Let's make something that matters!
+          </RoughNotation>
+        </motion.p>
+      </div>
     </div>
   );
 }
-)

@@ -13,12 +13,17 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^7.1.1",
     "@mui/material": "^7.1.1",
+    "animejs": "^4.0.2",
     "framer-motion": "^12.18.1",
+    "gasp": "^0.0.2",
+    "gsap": "^3.13.0",
     "lucide": "^0.515.0",
     "lucide-react": "^0.515.0",
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-rough-notation": "^1.0.5",
+    "rough-notation": "^0.5.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
